@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasePage {
+    //testing github
     protected static final String BASE_URL = "https://the-internet.herokuapp.com/";
     protected ChromeDriver driver;
 
