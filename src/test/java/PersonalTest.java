@@ -139,4 +139,8 @@ public class PersonalTest {
         assertEquals("2.5", range);
     }
 
+    public void quill(){
+        driver.get("https://quillbot.com/summarize");
+    }
+
 }
