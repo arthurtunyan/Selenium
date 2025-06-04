@@ -139,8 +139,17 @@ public class PersonalTest {
         assertEquals("2.5", range);
     }
 
-    public void quill(){
+    public void quill(String input) throws InterruptedException {
+        driver = new ChromeDriver();
         driver.get("https://quillbot.com/summarize");
+        Thread.sleep(3000);
+        driver.findElement(By.id("inputBoxSummarizer")).sendKeys(input);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[text()='Summarize']")).click();
+        Thread.sleep(2000);
+        String output = driver.findElement(By.id("outputBoxSummarizer")).getText();
+        System.out.print(output);
+        driver.quit();
     }
 
 }
