@@ -149,7 +149,7 @@ public class PersonalTest {
         Thread.sleep(2000);
         String output = driver.findElement(By.id("outputBoxSummarizer")).getText();
         System.out.print(output);
-        System.out.println("code works!");
+        System.out.println("new changes!");
         driver.quit();
     }
 
