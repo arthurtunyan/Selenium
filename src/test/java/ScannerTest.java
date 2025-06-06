@@ -6,5 +6,6 @@ public class ScannerTest {
        String input = scanner.nextLine();
        PersonalTest personalTest = new PersonalTest();
        personalTest.quill(input);
+        System.out.println("hello!");
     }
 }
