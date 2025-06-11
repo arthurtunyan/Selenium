@@ -162,6 +162,7 @@ public class PersonalTest {
             }
         }
         System.out.println(output); //very good code
+        //i think we should add a new method for the beautify
         driver.quit();
     }
 
