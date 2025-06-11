@@ -148,7 +148,20 @@ public class PersonalTest {
         driver.findElement(By.xpath("//span[text()='Summarize']")).click();
         Thread.sleep(2000);
         String output = driver.findElement(By.id("outputBoxSummarizer")).getText();
-        System.out.print(output);
+        int count = 0;
+
+        for(int i = 0; i<output.length(); i++){
+            if(output.substring(i,i+1).equals(" ")){
+                count++;
+            }
+            if(count==8){
+                System.out.println(output.substring(0,i));
+                output = output.substring(i+1);
+                i=0;
+                count = 0;
+            }
+        }
+        System.out.println(output);
         driver.quit();
     }
 
