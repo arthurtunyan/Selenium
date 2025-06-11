@@ -161,7 +161,7 @@ public class PersonalTest {
                 count = 0;
             }
         }
-        System.out.println(output); //Hey arthur just checking code
+        System.out.println(output); //very good code
         driver.quit();
     }
 
