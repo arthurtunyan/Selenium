@@ -150,20 +150,24 @@ public class PersonalTest {
         String output = driver.findElement(By.id("outputBoxSummarizer")).getText();
         int count = 0;
 
-        for(int i = 0; i<output.length(); i++){
+        output = quillHelper(output, count);
+        System.out.println(output); //very good code
+        driver.quit();
+    }
+
+    private static String quillHelper(String output, int count) {
+        for(int i = 0; i< output.length(); i++){
             if(output.substring(i,i+1).equals(" ")){
                 count++;
             }
-            if(count==8){
+            if(count ==8){
                 System.out.println(output.substring(0,i));
                 output = output.substring(i+1);
                 i=0;
                 count = 0;
             }
         }
-        System.out.println(output); //very good code
-        //i think we should add a new method for the beautify
-        driver.quit();
+        return output;
     }
-
+    //write a new branch like beautifier (name is that as well) write a method for it, then push the beautify branch to github then pull request it to main
 }
