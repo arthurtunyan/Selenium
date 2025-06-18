@@ -169,5 +169,4 @@ public class PersonalTest {
         }
         return output;
     }
-    //write a new branch like beautifier (name is that as well) write a method for it, then push the beautify branch to github then pull request it to main
 }
